@@ -78,7 +78,16 @@ footer p {
     max-width: 60ch;
 }
 
-.img {height: 100%;
+.image-wrapper {
+    position: relative;
+    height: 0;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: auto;
 }
 
@@ -91,8 +100,6 @@ footer p {
 ol.hero-text {
     padding: 0 4rem;
 }
-
-
 
 .sexy-button {
     display: inline-block;
