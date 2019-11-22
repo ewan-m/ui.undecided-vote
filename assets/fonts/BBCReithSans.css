@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'BBCReith';
+    src: url(./BBCReithSans_V2.301/BBCReithSans_W_Lt.woff2);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'BBCReith';
+    src: url(./BBCReithSans_V2.301/BBCReithSans_W_Md.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'BBCReith';
+    src: url(./BBCReithSans_V2.301/BBCReithSans_W_Rg.woff2);
+    font-weight: 550;
+}
+
+@font-face {
+    font-family: 'BBCReith';
+    src: url(./BBCReithSans_V2.301/BBCReithSans_W_Bd.woff2);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'BBCReith';
+    src: url(./BBCReithSans_V2.301/BBCReithSans_W_ExBd.woff2);
+    font-weight: 900;
+}
