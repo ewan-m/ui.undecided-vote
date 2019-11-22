@@ -1,0 +1,8 @@
+{
+    "files.exclude": {
+        "android-icon**.png": true,
+        "apple-icon**.png": true,
+        "favicon**.png": true,
+        "ms-icon**.png": true
+    }
+}
