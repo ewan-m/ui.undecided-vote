@@ -1,19 +1,23 @@
-const replaceInnerHtmlWithNewPage = (response, element) => {
+const replaceInnerHtmlWithNewPage = (response, routerOutletId) => {
     if (response.readyState === 4 && response.status === 200) {
-        element.innerHTML = response.responseText;
+        document.getElementById(routerOutletId).innerHTML = response.responseText;
+    } else {
+        loadPage({ id: "404" }, routerOutletId);
     }
 };
 
-const loadPage = (pageName, routerOutletId) => {
-    const element = document.getElementById(routerOutletId);
+const loadPage = (route, routerOutletId) => {
+    if (route.protected) {
+        console.login('oops');
+    }
     const request = new XMLHttpRequest();
-    request.onload = () => replaceInnerHtmlWithNewPage(request, element);
-    request.open("GET", `pages/${pageName}.html`, true);
+    request.onload = () => replaceInnerHtmlWithNewPage(request, routerOutletId);
+    request.open("GET", `pages/${route.id}.html`, true);
     request.send();
 };
 
 const getNewRoute = (routes, defaultRoute) =>
-    routes.find(route => window.location.hash.replace("#", "") === route) ||
+    routes.find(route => window.location.hash.replace("#", "") === route.id) ||
     defaultRoute;
 
 export const enableRouting = (routes, defaultRoute, routerOutletId) => {
