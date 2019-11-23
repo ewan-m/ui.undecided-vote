@@ -216,18 +216,6 @@ ol.hero-text {
 
 /* ANIMATIONS */
 
-.first {
-    animation-delay: 0s;
-}
-
-.second {
-    animation-delay: 3s;
-}
-
-.third {
-    animation-delay: 6s
-}
-
 .bigEnterBottom {
     animation: bigEnterBottom 3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }

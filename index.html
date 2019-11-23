@@ -37,7 +37,7 @@
 
 <body>
   <header>
-    <a class="smallEnterLeft second link" href="#landing">
+    <a class="smallEnterLeft link" href="#landing">
       <h1><span style="font-weight: 300;">undecided</span>vote</h1>
     </a>
     <button role="switch" aria-checked="false" aria-label="Mobile menu hamburger toggle"
@@ -52,14 +52,20 @@
       </svg>
     </button>
     <nav class="main-nav">
-      <ul class="nav-links bigEnterLeft first">
+      <ul class="nav-links bigEnterLeft">
         <li><a href="#selling" class="link">selling</a></li>
         <li><a href="#buying" class="link">buying</a></li>
         <li><a href="#about" class="link">about</a></li>
       </ul>
     </nav>
   </header>
-  <div id="router-outlet"></div>
+  <div id="router-outlet">
+    <div class="promo-container">
+      <div class="promo">
+        <p class="hero-text smallEnterBottom">Loading<span class="bigEnterBottom">...</span></p>
+      </div>
+    </div>
+  </div>
   <footer>
     <p>&copy; 2019 <strong>Parrison</strong></p>
     <section>
