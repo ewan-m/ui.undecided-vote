@@ -8,6 +8,11 @@ body {
     background-size: cover;
 }
 
+
+img {
+    max-width: 70vw;
+}
+
 header {
     padding: 0 1.5rem;
     display: flex;
@@ -108,13 +113,35 @@ ol.hero-text {
     outline: 4px solid #ecd343;
 }
 
+.desktop-nav {
+    display: initial;
+}
+
+/* MOBILE OPTIMIZATION */
+
 @media (max-width: 640px) {
+    .desktop-nav {
+        display: none;
+    }
+
     .hero-text {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .sexy-button {
         font-size: 1rem;
+    }
+
+    .promo-container {
+        padding: 0 1rem;
+    }
+
+    header {
+        padding: 0 0.5rem;
+    }
+
+    footer {
+        padding: 0.5rem;
     }
 }
 
