@@ -173,6 +173,21 @@ ol.hero-text {
     outline: 4px solid #ecd343;
 }
 
+.action-step {
+    user-select: none;
+    width: 10rem;
+    height: 10rem;
+    font-size: 4rem;
+    margin-right: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #273865;
+    border-radius: 50%;
+    border: 0.25rem solid #273865;
+}
+
 /* MOBILE OPTIMIZATION */
 
 @media (max-width: 640px) {

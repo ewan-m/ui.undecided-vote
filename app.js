@@ -4,6 +4,7 @@ function loadPage(newRoute) {
     request.onload = function () {
         if (request.readyState === 4 && request.status === 200) {
             document.getElementById("router-outlet").innerHTML = request.responseText;
+            FB.XFBML.parse(document.getElementById("router-outlet"));
         } else {
             loadPage("404");
         }
