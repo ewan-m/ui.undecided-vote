@@ -1,12 +1,22 @@
-import { enableRouting } from "./routing/router.js";
+function loadPage(newRoute) {
+    const protected = ["chat"];
+    const request = new XMLHttpRequest();
+    request.onload = function () {
+        if (request.readyState === 4 && request.status === 200) {
+            document.getElementById("router-outlet").innerHTML = request.responseText;
+        } else {
+            loadPage("404");
+        }
+    }
+    request.open("GET", "pages/".concat(newRoute, ".html"));
+    request.send();
+}
 
-const routes = [
-    { id: "landing" },
-    { id: "selling" },
-    { id: "facebooklogin" },
-    { id: "buying" },
-    { id: "about" },
-    { id: "chat", protected: true }
-]
+function getNewRoute() {
+    return window.location.hash ? window.location.hash.replace("#", "") : "landing";
+}
 
-enableRouting(routes, routes[0], "router-outlet");
+loadPage(getNewRoute());
+window.addEventListener("hashchange", function () {
+    loadPage(getNewRoute());
+});

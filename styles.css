@@ -10,6 +10,10 @@ body {
     overflow-x: hidden;
 }
 
+#router-outlet {
+    min-height: 100vh;
+}
+
 ul.nav-links {
     padding: 0.5rem 0 0;
 }
@@ -237,7 +241,7 @@ ol.hero-text {
 @keyframes smallEnterLeft {
     from {
         opacity: 0;
-        transform: translateX(-2vw);
+        transform: translateX(-1vw);
     }
     to {
         opacity: 1;
@@ -249,7 +253,7 @@ ol.hero-text {
 @keyframes bigEnterLeft {
     from {
         opacity: 0;
-        transform: translateX(-20vw);
+        transform: translateX(-2vw);
     }
     to {
         opacity: 1;
@@ -260,7 +264,7 @@ ol.hero-text {
 @keyframes smallEnterBottom {
     from {
         opacity: 0;
-        transform: translateY(2vh);
+        transform: translateY(1vh);
     }
     to {
         opacity: 1;
@@ -271,7 +275,7 @@ ol.hero-text {
 @keyframes bigEnterBottom {
     from {
         opacity: 0;
-        transform: translateY(20vh);
+        transform: translateY(2vh);
     }
     to {
         opacity: 1;
